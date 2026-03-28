@@ -16,7 +16,7 @@ def index():
         try:
             matches = re.findall(pattern, text)
         except:
-            error = "Invalid Regex Pattern!"
+            error = "Invalid regex pattern. Please try again."
 
     return render_template("index.html", matches=matches, error=error)
 
