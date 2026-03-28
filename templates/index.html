@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regex Tester</title>
+</head>
+
+<body>
+
+<h2>Regex Tester App</h2>
+
+<form method="POST">
+
+    <label>Enter Test String:</label><br><br>
+
+    <textarea name="text" rows="5" cols="50" required></textarea>
+
+    <br><br>
+
+    <label>Enter Regex Pattern:</label><br><br>
+
+    <input type="text" name="pattern" required>
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<hr>
+
+<h3>Matched Results:</h3>
+
+{% if error %}
+    <p style="color:red">{{ error }}</p>
+{% endif %}
+
+<ul>
+{% for item in matches %}
+    <li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
